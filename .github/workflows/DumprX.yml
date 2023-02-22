@@ -45,8 +45,8 @@ jobs:
               mkdir -p ~/.ssh
               ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
               ssh-keyscan -t rsa gitlab.com >> ~/.ssh/known_hosts
-              git config --global user.name "Sushrut1101"
-              git config --global user.email "guptasushrut@gmail.com"
+              git config --global user.name "SIDDK2406"
+              git config --global user.email "skoyande24@gmail.com"
 
        - name: Setup Config envs
          working-directory: DumprX
@@ -56,8 +56,6 @@ jobs:
               echo "${{ secrets.GITLAB_TOKEN }}" > .gitlab_token  # Only for Gitlab
               echo "${{ secrets.GITLAB_GROUP }}" > .gitlab_group  # Only for Gitlab
               echo "${{ secrets.PRIV_SSH_KEY }}" > ~/.ssh/id_rsa  # Only for Gitlab
-              echo "${{ secrets.BOT_TOKEN }}" > .tg_token
-              echo "${{ secrets.CHAT_ID }}" > .tg_chat
               chmod 600 ~/.ssh/id_rsa
 
        - name: Run the Extra Command
